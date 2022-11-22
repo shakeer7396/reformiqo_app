@@ -10,6 +10,7 @@ const Home = () => {
   return (
     <Box>
       <Navbar />
+      
       <Box>
   <Image src={home} alt='Dan' height={"600"}
       width="100%" />

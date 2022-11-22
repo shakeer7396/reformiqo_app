@@ -12,7 +12,7 @@ import { Box } from '@chakra-ui/react';
 
 
 const SignIn = () => {
-  const history = useNavigate();
+  const navigate = useNavigate();
 
   const [inpval, setInpval] = useState({
       email: "",
@@ -42,7 +42,7 @@ const SignIn = () => {
   const addData = (e) => {
       e.preventDefault();
 
-      const getuserArr = localStorage.getItem("useryoutube");
+      const getuserArr = localStorage.getItem("userData");
       console.log(getuserArr);
 
       const { email, password } = inpval;
@@ -77,7 +77,7 @@ const SignIn = () => {
 
                   localStorage.setItem("user_login", JSON.stringify(userlogin))
 
-                  history("/home")
+                  navigate("/")
               }
           }
       }
@@ -89,11 +89,11 @@ const SignIn = () => {
       <Navbar />
         <Box backgroundImage={aboutbg} height={"600"}
       width="100%">
-          <div className="container mt-3" >
+          <div className="container mt-0"  ml={"100"} >
               <section className='d-flex justify-content-between'>
                   <div className="left_data mt-3 p-3" style={{ width: "100%" }}>
-                      <h1 className='text-center col-lg-6'>Sign IN</h1>
-                      <Form className= 'mt-5'>
+                      <h1 className='text-center col-lg-10' style={{fontSize:"25px",fontWeight:"900",color:"#9a1aef",marginTop:"150px"}}>Sign IN</h1>
+                      <Form className= 'mt-5 col-lg-10' style={{marginLeft:"250px"}}>
 
                           <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
 
@@ -104,11 +104,12 @@ const SignIn = () => {
 
                               <Form.Control type="password" name='password' onChange={getdata} placeholder="Password" />
                           </Form.Group>
-                          <Button variant="primary" className='col-lg-6' onClick={addData} style={{ background: "#9a1aef",marginLeft:"-640px" }} type="submit">
+                          <Button variant="primary" className='col-lg-6' onClick={addData} style={{ background: "#9a1aef",marginLeft:"-530px" }} type="submit">
                               Submit
                           </Button>
                       </Form>
-                      <p className='mt-3'style={{marginLeft:"-640px"}}>Don't have an Account yet --<Link to='/signup' style={{color:"blue",}} >SignUp</Link> </p>
+                      <p className='mt-3'style={{marginLeft:"-380px"}}>Don't have an Account yet --<Link to='/signup' style={{color:"blue",}} >SignUp</Link> </p>
+                      <p className='mt-3'style={{marginLeft:"-380px"}}><Link to='/recover' style={{color:"blue",}} >Forgot Password</Link> </p>
                   </div>
                   {/* <SIgn_img /> */}
               </section>

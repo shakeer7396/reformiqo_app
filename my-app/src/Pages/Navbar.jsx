@@ -26,6 +26,7 @@ import logo from "../photos/logo.png"
         <Router to="/">Home</Router>
         <Router to="/about">About</Router>
         <Router to="/services">Services</Router>
+        <Router to="/career">Careers</Router>
         {/* <Router to="/report">Career</Router> */}
         <Button bg={"#9a1aef"} color={"white"} ><Router to='/signin'  >SignIn</Router></Button>
 

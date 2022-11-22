@@ -5,7 +5,7 @@ import aboutbg from '../photos/hm2.webp'
 import { Box, Button, Flex, Heading, Text } from '@chakra-ui/react'
 
 
-const About = () => {
+const Career = () => {
   return (
     <div>
       <Navbar />
@@ -15,8 +15,7 @@ const About = () => {
       margin={"auto"}     
       background={'black'}
     >     
-     <Heading color={"white"}>About</Heading>
-     <Text color={"white"}>About Reformiqo</Text>
+     <Heading color={"white"}>Careers</Heading>
     </Box>
       <Box backgroundImage={aboutbg} height={"850"}
       width="100%" >
@@ -24,7 +23,7 @@ const About = () => {
       width="40%"
       ml={"50%"} pr={'10'}
        >
-    <Heading color={"#9a1aef"} pt={'20'}>About</Heading>
+    <Heading color={"#9a1aef"} pt={'20'}>Careers</Heading>
     <Text color={"white"} >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic molestiae, ullam ipsa et minima ut itaque nobis atque id in est consequatur dolores. Natus iure pariatur at dolores amet quis.</Text>
 
     <Text mt={'18'} pt={'15'} color={"white"}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic molestiae, ullam ipsa et minima ut itaque nobis atque id in est consequatur dolores. Natus iure pariatur at dolores amet quis. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic molestiae, ullam ipsa et minima ut itaque nobis atque id in est consequatur dolores. Natus iure pariatur at dolores amet quis</Text>
@@ -57,4 +56,4 @@ const About = () => {
   )
 }
 
-export default About
+export default Career

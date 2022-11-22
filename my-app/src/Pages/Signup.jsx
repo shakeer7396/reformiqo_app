@@ -13,7 +13,7 @@ import aboutbg from '../photos/hm2.webp'
 
 
 const Signup = () => {
-  const history = useNavigate();
+  const navigate = useNavigate();
 
   const [inpval, setInpval] = useState({
       name: "",
@@ -75,8 +75,8 @@ const Signup = () => {
           });
       } else {
           console.log("data added succesfully");
-          history("/signin")
-          localStorage.setItem("useryoutube",JSON.stringify([...data,inpval]));
+          navigate("/signin")
+          localStorage.setItem("userData",JSON.stringify([...data,inpval]));
 
       }
 
@@ -90,7 +90,7 @@ const Signup = () => {
           <div className="container mt-3">
               <section className='d-flex justify-content-between'>
                   <div className="left_data mt-3 p-3" style={{ width: "100%" }}>
-                      <h1 className='text-center col-lg-6'>Sign Up</h1>
+                      <h1 className='text-center col-lg-6' style={{fontSize:"25px",fontWeight:"900",color:"#9a1aef",marginTop:"150px"}}>Sign Up</h1>
                       <Form className= 'mt-5' >
                           <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
 
